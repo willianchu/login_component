@@ -4,9 +4,9 @@
 }
 
 :root {
-  --primary-light-hsl: 200, 100%, 91%;
-  --primary-hsl: 200, 100%, 50%;
-  --primary-dark-hsl: 200, 100%, 6%;
+  --primary-light-hsl: 250, 100%, 91%;
+  --primary-hsl: 250, 100%, 50%;
+  --primary-dark-hsl: 250, 100%, 6%;
   --success-hsl: 100, 60%, 50%;
   --error-hsl: 0, 60%, 50%;
 }
@@ -101,4 +101,21 @@ body {
 
 .input-group.success .msg {
   color: hsl(var(--success-hsl));
+}
+
+.login-button {
+  padding: .5em 1em;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: azure;
+  background-color: hsl(var(--primary-hsl), .25);
+  border: 1px solid hsl(var(--primary-hsl));
+  outline: none;
+  border-radius: .25em;
+  cursor: pointer;
+}
+
+.login-button:hover,
+.login-button:focus {
+  background-color: hsl(var(--primary-hsl), .4);
 }
