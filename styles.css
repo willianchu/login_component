@@ -7,6 +7,8 @@
   --primary-light-hsl: 200, 100%, 91%;
   --primary-hsl: 200, 100%, 50%;
   --primary-dark-hsl: 200, 100%, 6%;
+  --success-hsl: 100, 60%, 50%;
+  --error-hsl: 0, 60%, 50%;
 }
 
 body {
@@ -70,4 +72,33 @@ body {
   border-radius: .25em;
   color: azure;
   font-weight: lighter;
+}
+
+.input-group.success input {
+  box-shadow: 0 0 0 1px hsl(var(--success-hsl));
+}
+
+.input-group.error input {
+  box-shadow: 0 0 0 1px hsl(var(--error-hsl));
+}
+.input-group input:focus {
+  box-shadow: 0 0 0 1px hsl(var(--primary-hsl));
+}
+
+.input-group .msg {
+  display: none;
+  font-size: .75rem;
+}
+
+.input-group.success .msg,
+.input-group.error .msg{
+  display: block;
+}
+
+.input-group.error .msg {
+  color: hsl(var(--error-hsl));
+}
+
+.input-group.success .msg {
+  color: hsl(var(--success-hsl));
 }
